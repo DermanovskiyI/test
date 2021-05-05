@@ -1,0 +1,28 @@
+[
+    {
+        "experienceGroup": "Frontend",
+        "circles": {
+            "HTML5": 80,
+            "CSS3": 70,
+            "JavaScript & jQuery": 30
+        }
+    },
+    {
+        "experienceGroup": "Backend",
+        "circles": {
+            "PHP": 30,
+            "mySQL": 60,
+            "Node.js & npm": 50,
+            "Mongo.db": 90
+        }
+    },
+    {
+        "experienceGroup": "WorkFlow",
+        "circles": {
+            "Git": 30,
+            "Gulp": 50,
+            "Yarn": 30
+        }
+    }
+
+]

@@ -1,0 +1,11 @@
+.auth-btn {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+
+    @media (max-width:576px) {
+
+        right: 50%;
+        transform: translate(50%, -5%);
+    }
+}

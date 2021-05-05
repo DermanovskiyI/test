@@ -1,0 +1,49 @@
+.skills {
+    // padding: 0 10px 0 40px;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 56px;
+    }
+    &__subtitle{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 35px;
+        max-width: 285px;
+        margin-bottom: 39px;
+        text-align: center;
+    }
+    &__subtitle::after {
+        width: 89px;
+        height: 3px;
+        background-color: $grey;
+        content: "";
+        display: block;
+        margin-top: 30px;
+    }
+    &__desk {
+        font-family: Roboto;
+        
+    }
+
+}
+
+// .Чем_я_могу_быть_вам_полезен {
+//     font-size: 35px;
+//     font-family: "SansusWebissimo";
+//     color: rgb(86, 99, 88);
+//     text-transform: uppercase;
+//     line-height: 1.171;
+//     text-align: center;
+//     -moz-transform: matrix( 1.00124326564443,0,0,0.99792886477283,0,0);
+//     -webkit-transform: matrix( 1.00124326564443,0,0,0.99792886477283,0,0);
+//     -ms-transform: matrix( 1.00124326564443,0,0,0.99792886477283,0,0);
+//     position: absolute;
+//     left: 759.049px;
+//     top: 652.175px;
+//     z-index: 54;
+//   }
+  

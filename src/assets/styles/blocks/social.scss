@@ -1,0 +1,32 @@
+.socials{
+    display: flex;
+    // justify-content: space-between;
+    // @media (max-width:992px) {
+
+    //     margin-left: 25px;
+    //     // flex-wrap: nowrap;
+    // }
+
+    &__icon {
+        width: 31px;
+        height: 17px;
+        fill: $white;
+        transition: fill .3s;
+        &:hover {
+            fill: $dark-green;
+            transition: fill .3s;
+        }
+    }
+
+}
+
+// .socials--witout-align {
+//     justify-content: flex-start;
+    
+// }
+.social__item--with-margin {
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
+}

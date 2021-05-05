@@ -1,0 +1,13 @@
+.triangle__svg--beige {
+    fill: $beige;
+}
+
+.triangle__svg--white {
+    fill: #f4f5f0;
+    @media (max-width: 991px) {
+        fill: #ebefe2;
+    }
+}
+.triangle__svg--works {
+    fill: white;
+}

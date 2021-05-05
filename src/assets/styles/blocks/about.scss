@@ -1,0 +1,108 @@
+.about {
+
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    font-family: Sansus;
+    @media (max-width: 991px) {
+        flex-direction: column;
+    }
+    &__info,
+    &__skills {
+        flex: 1;
+        padding: 30px 40px;
+        @media (max-width: 991px) {
+            padding: 30px 120px;
+        }
+        @media (max-width: 576px) {
+            padding: 30px 20px;
+        }
+    }
+    &__info {
+        background-color: #ebefe2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 39px;
+        min-width: 100%;
+
+        &-text {
+            z-index: 1;
+            @media (max-width: 576px) {
+                text-align: center;
+            }
+        }
+        
+        &::after {
+            width: 89px;
+            height: 3px;
+            background-color: $grey;
+            content: "";
+            display: block;
+            margin-top: 30px;
+            
+        }
+    }
+    &__title-pic {
+        fill: rgba(#93c42e, .3);
+        position: absolute;
+        top: 2%;
+        &-img {
+            width: 357px;
+        }
+        
+    }
+    &__user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__photo {
+        display: flex;
+        margin-bottom: 40px;
+    }
+    &__photo-img {
+        max-width: 100%;
+    }
+
+    &__desk {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__subtitle {
+        color: #373e42;
+        font-size: 36px;
+        text-align: center;
+    }
+    &__subtitle::after {
+        width: 89px;
+        height: 3px;
+        background-color: #373e42;
+        content: "";
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 28px;
+    }
+    &__desk-text {
+        font-family: Roboto;
+        text-align: left;
+    }
+
+
+
+    
+    
+    &__skills {
+        background-color: #f4f5f0;
+        @media (max-width: 991px) {
+            text-align: center;
+        }
+    }
+}

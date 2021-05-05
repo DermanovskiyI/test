@@ -1,0 +1,35 @@
+.works {
+    min-height: 100vh;
+
+    
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 63px;
+        font-weight: 600;
+        position: relative;
+        margin-bottom: 50px;
+        padding-top: 50px;
+        @media (max-width:576px) {
+            font-size: 35px;
+         }
+        
+    }
+    &__title-text {
+        z-index: 1;
+    }
+ 
+    &__title::after {
+        content: "";
+        width: 5.625rem;
+        height: .25rem;
+        background-color: #373e42;
+        position: absolute;
+        bottom: -20px;
+    }
+
+}
+
+
+  

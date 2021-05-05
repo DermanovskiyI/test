@@ -1,0 +1,92 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Блог'
+  - var triangleLeft = 'triangle__svg--beige'
+  - var triangleRight = 'triangle__svg--beige'
+    block scripts
+    script(src='about.bundle.js')
+
+
+block content
+    section.hero
+        block header pic
+        - var headerClass = 'header header--blog'
+        - var iconName = 'blog_header'
+        - var iconClass = 'header__pic header__pic--blog'
+        include ../common/header
+
+        .hero__socials
+            include ../common/socials
+    
+        .hero__menu
+            include ../common/hamburger
+
+        .hero__content
+            .user
+                .user__pic
+                    img(src="./assets/images/igor.jpg", alt="").user__pic-img
+            h1.title.blog__title БЛОГ
+            .user__subtitle Статьи, которые я написал
+            //- block user 
+            //- include ../common/user
+                
+        .hero__arrow
+            a(href="").hero__arrow-down.arrow_down
+                +icon('arrow_down', 'arrow arrow_down')
+
+        block triangles
+        include ../common/triangles
+
+    section.blog
+        -
+            var articles = {
+                1:  {   
+                        'id':'first',
+                        'title':'Самое важное в CASS', 
+                        'date': '01.01.2021', 
+                        'text': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ex ipsa ratione. Obcaecati consectetur tempore minima id aperiam, voluptatum excepturi rerum sapiente odio saepe fugit distinctio, nobis vitae. Aut exercitationem nam corporis vel reprehenderit quae aliquid, dolor ullam repellat molestiae ut iusto. Voluptas ea id praesentium perspiciatis quia! Deserunt dolorum et ullam magni veniam, aliquid laudantium nemo, laborum veritatis quaerat in rerum architecto numquam quasi tenetur! In iure quae, doloribus velit inventore rem tempora distinctio recusandae dignissimos repudiandae consectetur dolorem quia facilis rerum illo ducimus odit! Vitae explicabo ut nihil reiciendis! Natus, cupiditate. Porro incidunt optio a quos? Libero ipsam saepe sed aspernatur incidunt harum excepturi vel nihil, facere voluptatibus aut. Ex recusandae necessitatibus officia minima molestias error delectus quidem nobis illo. Quibusdam quod eum dolorum enim alias sed quasi cupiditate beatae soluta. Vel maiores explicabo dolorem labore magnam, perspiciatis omnis voluptatum numquam quis, tempora ullam autem in, dolorum amet adipisci animi quaerat perferendis fugit veniam temporibus sit saepe eos sint. At aliquid, hic unde esse accusamus explicabo maxime praesentium doloremque assumenda, animi ipsum. Accusamus aspernatur saepe aliquid eum suscipit, veritatis consectetur fugiat. Reiciendis iusto consequatur expedita, facere enim tempore cumque omnis, fugiat, reprehenderit recusandae voluptatibus harum vitae inventore quo.'
+                    },
+                2:  {
+                        'id':'second',
+                        'title':'Приемы в верстке, без которых не обходится ни один сайт', 
+                        'date': '01.01.2021', 
+                        'text': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ex ipsa ratione. Obcaecati consectetur tempore minima id aperiam, voluptatum excepturi rerum sapiente odio saepe fugit distinctio, nobis vitae. Aut exercitationem nam corporis vel reprehenderit quae aliquid, dolor ullam repellat molestiae ut iusto. Voluptas ea id praesentium perspiciatis quia! Deserunt dolorum et ullam magni veniam, aliquid laudantium nemo, laborum veritatis quaerat in rerum architecto numquam quasi tenetur! In iure quae, doloribus velit inventore rem tempora distinctio recusandae dignissimos repudiandae consectetur dolorem quia facilis rerum illo ducimus odit! Vitae explicabo ut nihil reiciendis! Natus, cupiditate. Porro incidunt optio a quos? Libero ipsam saepe sed aspernatur incidunt harum excepturi vel nihil, facere voluptatibus aut. Ex recusandae necessitatibus officia minima molestias error delectus quidem nobis illo. Quibusdam quod eum dolorum enim alias sed quasi cupiditate beatae soluta. Vel maiores explicabo dolorem labore magnam, perspiciatis omnis voluptatum numquam quis, tempora ullam autem in, dolorum amet adipisci animi quaerat perferendis fugit veniam temporibus sit saepe eos sint. At aliquid, hic unde esse accusamus explicabo maxime praesentium doloremque assumenda, animi ipsum. Accusamus aspernatur saepe aliquid eum suscipit, veritatis consectetur fugiat. Reiciendis iusto consequatur expedita, facere enim tempore cumque omnis, fugiat, reprehenderit recusandae voluptatibus harum vitae inventore quo.'
+                    },
+                3:  {
+                        'id':'third',
+                        'title':'Самый необходимый набор Gulp плагинов', 
+                        'date': '01.01.2021', 
+                        'text': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ex ipsa ratione. Obcaecati consectetur tempore minima id aperiam, voluptatum excepturi rerum sapiente odio saepe fugit distinctio, nobis vitae. Aut exercitationem nam corporis vel reprehenderit quae aliquid, dolor ullam repellat molestiae ut iusto. Voluptas ea id praesentium perspiciatis quia! Deserunt dolorum et ullam magni veniam, aliquid laudantium nemo, laborum veritatis quaerat in rerum architecto numquam quasi tenetur! In iure quae, doloribus velit inventore rem tempora distinctio recusandae dignissimos repudiandae consectetur dolorem quia facilis rerum illo ducimus odit! Vitae explicabo ut nihil reiciendis! Natus, cupiditate. Porro incidunt optio a quos? Libero ipsam saepe sed aspernatur incidunt harum excepturi vel nihil, facere voluptatibus aut. Ex recusandae necessitatibus officia minima molestias error delectus quidem nobis illo. Quibusdam quod eum dolorum enim alias sed quasi cupiditate beatae soluta. Vel maiores explicabo dolorem labore magnam, perspiciatis omnis voluptatum numquam quis, tempora ullam autem in, dolorum amet adipisci animi quaerat perferendis fugit veniam temporibus sit saepe eos sint. At aliquid, hic unde esse accusamus explicabo maxime praesentium doloremque assumenda, animi ipsum. Accusamus aspernatur saepe aliquid eum suscipit, veritatis consectetur fugiat. Reiciendis iusto consequatur expedita, facere enim tempore cumque omnis, fugiat, reprehenderit recusandae voluptatibus harum vitae inventore quo.'
+                    },
+                4:  {
+                        'id':'fourth',
+                        'title':'Почему я выбрал Jade', 
+                        'date': '01.01.2021', 
+                        'text': 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ex ipsa ratione. Obcaecati consectetur tempore minima id aperiam, voluptatum excepturi rerum sapiente odio saepe fugit distinctio, nobis vitae. Aut exercitationem nam corporis vel reprehenderit quae aliquid, dolor ullam repellat molestiae ut iusto. Voluptas ea id praesentium perspiciatis quia! Deserunt dolorum et ullam magni veniam, aliquid laudantium nemo, laborum veritatis quaerat in rerum architecto numquam quasi tenetur! In iure quae, doloribus velit inventore rem tempora distinctio recusandae dignissimos repudiandae consectetur dolorem quia facilis rerum illo ducimus odit! Vitae explicabo ut nihil reiciendis! Natus, cupiditate. Porro incidunt optio a quos? Libero ipsam saepe sed aspernatur incidunt harum excepturi vel nihil, facere voluptatibus aut. Ex recusandae necessitatibus officia minima molestias error delectus quidem nobis illo. Quibusdam quod eum dolorum enim alias sed quasi cupiditate beatae soluta. Vel maiores explicabo dolorem labore magnam, perspiciatis omnis voluptatum numquam quis, tempora ullam autem in, dolorum amet adipisci animi quaerat perferendis fugit veniam temporibus sit saepe eos sint. At aliquid, hic unde esse accusamus explicabo maxime praesentium doloremque assumenda, animi ipsum. Accusamus aspernatur saepe aliquid eum suscipit, veritatis consectetur fugiat. Reiciendis iusto consequatur expedita, facere enim tempore cumque omnis, fugiat, reprehenderit recusandae voluptatibus harum vitae inventore quo.'
+                    }
+            }
+
+        .blog__chapters
+            ul.chapters
+                each chapter in articles
+                    li.chapters__item
+                        a(href=`#${chapter.id}`).chapters__link= chapter.title
+        .blog__articles
+              
+            ul.articles
+
+                
+                each item in articles
+                    li.articles__item(id=item.id)
+                        article.article 
+                            .title.articles__title=item.title
+                            .articles__date=item.date
+                            .articles__desk
+                                p.articles__desk-text=item.text
+    block footer
+    include ../common/footer.pug
+
+
+
+    

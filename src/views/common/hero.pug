@@ -1,0 +1,24 @@
+section.hero
+    block header pic
+    include ../common/header
+    .hero__socials
+      include ../common/socials
+    
+    block hamburger
+    include ../common/hamburger
+
+    .hero__content
+      
+      //- .content__desc
+      
+      block user
+      include ../common/user
+
+
+    .hero__arrow
+      a(href="#").scroll-down
+        +icon('arrow_down', 'arrow arrow_down')
+
+
+    block triangles 
+    include ../common/triangles

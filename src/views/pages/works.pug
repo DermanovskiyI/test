@@ -1,0 +1,121 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+  - var triangleLeft = 'triangle__svg--works'
+  - var triangleRight = 'triangle__svg--works'
+  - var headerClass = 'header header--hero'
+  - var userTitleAbout = 'user__title--about'
+  - var iconClass = 'header__pic header__pic--portfolio'
+  - var iconName = 'portfolio_header'
+ 
+
+block scripts
+    script(src='works.bundle.js')
+
+
+block content
+    block hero 
+    include ../common/hero
+
+
+
+    section.works
+        .title.works__title
+            .works__title-text МОИ РАБОТЫ
+            block header pic
+            - var headerClass = 'header header--works'
+            - var iconName = 'works_header'
+            - var iconClass = 'header__pic header__pic--works'
+            include ../common/header
+
+        #vue-slider
+        //- include ../components/templates/slider.pug
+        //- .slider
+        //-     .slider__info
+        //-         .title.slider__title САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ
+
+        //-         .slider__subtitle HTML, CSS, JAVASCRIPT
+
+        //-         a(href="#").slider__link Посмотреть сайт
+        //-             .slider__pic 
+        //-                 +icon('link', 'slider__pic-icon')
+
+        //-     .slider__display
+        //-         .slider__display-pic
+        //-             +image('work-1.png', 'work-1.png', 'slider__display-pic-img')
+
+
+
+        //-     .slider__buttons
+        //-         .slider__button
+        //-             a(href="#").slider__arrow
+        //-                 +icon('arrow_down', 'arrow arrow--slider')
+        //-                 .slider__button-container           
+        //-                     .slider__button-pic
+        //-                         img(src="./assets/images/work-4.png", alt="").slider__button-pic-img
+                    
+        //-         .slider__button
+        //-             a(href="#").slider__arrow
+        //-                 +icon('arrow_down', 'arrow arrow--slider arrow--slider--down')
+        //-                 .slider__button-container 
+        //-                     .slider__button-pic
+        //-                         img(src="./assets/images/work-3.png", alt="").slider__button-pic-img
+
+    section.recomendations
+        block header pic
+        - var headerClass = 'header--recomendations'
+        - var iconName = 'about_header'
+        - var iconClass = 'header__pic header__pic--recomendations'
+        include ../common/header
+
+        .title.recomendations__title
+            h2.recomendations__title-text ЧТО ОБО МНЕ ГОВОРЯТ
+            //- .recomendations__title-pic
+            //-     +icon('about_header', 'recomenadions__pic-img')
+    
+        
+
+
+        -
+            var recomends = {
+                    1: {
+                        'photo':'kovalchuk.png',
+                        'text':'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
+                        'human': {
+                                'name':'Ковальчук Дмитрий',
+                                'position':'— основатель Loftschool'
+                                }
+                        },
+                    2: {
+                        'photo':'sabantcev.png',
+                        'text':'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
+                        'human': {
+                                'name':'Сабанцев Владимир',
+                                'position':'— преподаватель Loftschool'
+                                }
+                        }
+                }
+    
+        ul.recomendations__list 
+            each commend in recomends
+                li.recomendations__item
+                    .recomendations__pic
+                        +image(commend.photo, commend.photo, 'recomendations__pic-img')
+                    .recomendations__review
+                        .recomendations__review-text=commend.text
+                        .recomendations__about
+                            .recomendations__about-name=commend.human.name
+                            .recomendations__about-position=commend.human.position
+
+               
+        .recomendations__feedback
+            block feedback 
+            include ../common/feedback
+
+        .recomendations__arrow
+             a(href="").scroll-up
+                +icon('arrow_down', 'arrow arrow--up')
+        block footer
+        include ../common/footer.pug
+        

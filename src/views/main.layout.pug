@@ -1,0 +1,29 @@
+include ./common/_mixins
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    meta(content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport")
+
+    title Portfolio | #{title}
+    link(rel='stylesheet' href='main.min.css')
+   
+      
+  body
+   
+    .wrapper
+      .maincontent
+   
+        block content
+      include ./components/entry.pug
+    block popup 
+    include ./common/popup      
+
+    //- #vue-overlay
+
+    //- script(src='bootloader.bundle.js')
+    //- script(src='vendor.bundle.js')
+    block scripts

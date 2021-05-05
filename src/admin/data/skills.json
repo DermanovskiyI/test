@@ -1,0 +1,24 @@
+[
+    {   
+        "id": 1,
+        "experienceGroup": "Frontend",
+        "circles": {
+
+        }
+    },
+    {   
+        "id": 2,
+        "experienceGroup": "Backend",
+        "circles": {
+
+        }
+    },
+    {   
+        "id": 3,
+        "experienceGroup": "WorkFlow",
+        "circles": {
+
+        }
+    }
+
+]

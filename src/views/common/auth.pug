@@ -1,0 +1,58 @@
+script(type='text/x-template')#auth
+    form.auth(action="#")
+        .overlay(v-show="overlay")
+            .overlay__container
+                .overlay__msg {{errorMsg}}
+                a(href="#" @click.prevent="closeOverlay").overlay__close закрыть 
+        .auth__container
+            .auth__title
+                h1.title.auth__title--text АВТОРИЗУЙТЕСЬ
+            .auth__inputs
+                .auth__row
+                    label.auth__input
+                        .auth__pic
+                            +icon('login', 'auth__pic-login')
+                        input(type="text" placeholder="Логин" required v-model="name").auth__input-elem
+                        .auth__input--error 
+                .auth__row
+                    label.auth__input
+                        .auth__pic
+                            +icon('password', 'auth__pic-password')
+                        input(type="password" placeholder="Пароль" required v-model="password").auth__input-elem
+                        .auth__input--error 
+            label.auth__checkbox
+                input(type="checkbox").auth__check
+                .auth__check-visible
+                .auth__name.auth__check-name Я человек
+
+            .auth__capcha Вы точно не робот?
+            .auth__controlls
+                
+                label.auth__radio 
+                    input(type="radio" name="capcha").auth__input-radio
+                    .auth__radio-visible
+                    .auth__name.auth__radio-name Да
+                label.auth__radio 
+                    input(type="radio" name="capcha").auth__input-radio
+                    .auth__radio-visible
+                    .auth__name.auth__radio-name Не уверен
+
+
+        auth-btns(:name="name"
+                  :password="password"
+                  @getErrMsg="showOverlay"
+                  :overlay="overlay"   
+                )   
+script(type='text/x-template')#authBtns 
+    ul.auth__btns
+        li.auth__btns-item
+            a(href="./about.html").auth__btns-link На главную 
+        li.auth__btns-item
+            button(type="submit" @click.prevent="sendData").auth__btns-link.auth__btns-link--submit Войти
+
+
+
+
+
+
+

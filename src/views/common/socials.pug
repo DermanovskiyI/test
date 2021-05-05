@@ -1,0 +1,7 @@
+
+
+ul.socials
+    each link, social in {vk: 'http://www.vk.com/iderman', github: 'http://www.git.com', in: 'http://www.linkedin.com'}
+            li.socials__item.social__item--with-margin
+                a(href= link).socials__link
+                    +icon(social, 'socials__icon') 

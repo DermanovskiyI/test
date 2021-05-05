@@ -1,0 +1,8 @@
+.header(class=headerClass)
+    //- img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+    svg(class=`${iconClass}`)  
+        use(xlink:href=`/assets/images/icons/sprite.svg#${iconName}`)
+
+
+//- svg(class=`${iconClass}`)  ДОЛЖНЫ БЫТЬ НЕ ИМГ А СВГ. ПОМЕНЯТЬ НА СТРАНИЦАХ ABOUT, BLOG В СЕКЦИЯХ. СЕЙЧАС СТОИТ ВСЁ ЧЕРЕЗ ПУТИ В IMG
+//-     use(xlink:href=`/assets/images/icons/sprite.svg#${iconName}`)

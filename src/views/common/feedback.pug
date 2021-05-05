@@ -1,0 +1,19 @@
+form.feedback(action="#")
+    .feedback__container
+        .title.feedback__title СВЯЗАТЬСЯ СО МНОЙ
+
+        .feedback__rows
+            .feedback__row
+                input(type="text" placeholder="Имя" required).feedback__input-elem
+                .feedback__row-error 
+            .feedback__row
+                input(type="email" placeholder="Email" required).feedback__input-elem
+                .feedback__row-error  
+            .feedback__row
+                textarea.feedback__input-elem.feedback__input-elem-area(cols="20", rows="7", placeholder="Ваше сообщение" required)
+                .feedback__row-error  
+
+
+    .feedback__buttons
+        button(type="submit").btn.btn--feedback Отправить
+        button(type="reset").btn.btn--feedback Очистить

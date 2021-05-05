@@ -1,0 +1,85 @@
+.welcome {
+
+    background: url('assets/images/water.jpg'), linear-gradient(90deg, rgba(0, 0, 0, 0.7707457983193278) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+
+        perspective: 1000px;
+        width: 438px;
+        height: 412px;
+
+        @media (max-width: 576px) {
+            width: 225px;
+            height: 385px;
+        }
+    }
+
+    &__flipper {
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    &__container--animate &__flipper {
+        transform: rotateY(180deg);
+    }
+
+    &__front,
+    &__back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__front {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+
+    &__back {
+        transform: rotateY(180deg);
+    }
+
+    &__info {
+        background: rgba(black, .4);
+        padding: 35px 75px 40px 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 576px) {
+            padding: 15px 35px;
+        }
+    }
+
+    &__user {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 35px;
+
+        @media (max-width: 576px) {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+    }
+
+
+    &__social {
+        opacity: .8;
+        // margin-bottom: 30px;
+    }
+
+}

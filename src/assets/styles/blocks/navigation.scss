@@ -1,0 +1,132 @@
+.navigation {
+
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+        @media (max-width:992px) {
+            justify-content: start;
+        }
+    }
+    &__item {
+        margin-right: 21px;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-right: 0;
+            
+        }
+    }
+    &__link {
+        color: $white;
+        // font-weight: 600;
+        transition: color .3s;
+        &:hover {
+            color: $dark-green;
+            transition: color .3s;
+        }
+    }
+
+    &--popop {
+        margin-bottom: 0px;
+    }
+    &--popup &__list {
+        flex-direction: column;
+        font-size: 63px;
+        text-align: center;
+        text-transform: uppercase;
+        align-items: center;
+    }
+    &--popup &__item {
+        margin-bottom: 60px;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        @media (max-width: 425px) {
+            font-size: 42px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &--popup &__item--popup--active::after {
+        width: 89px;
+        height: 3px;
+        background-color: $white;
+        content: "";
+        display: block;
+        margin-top: 30px;
+    }
+}
+
+
+
+//welcome
+.navigation {
+    // display: inline-flex;
+    &--auth {
+        margin-bottom: 0px;
+        display: block;
+
+    }
+
+    &__list--auth {
+
+        display: flex;
+        // justify-content: space-evenly;
+        flex-wrap: nowrap;
+        border-radius: 0 0 5px 5px;
+        overflow: hidden;
+
+    }
+    &__item--auth {
+        margin-right: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        // width: 100%;
+        flex-grow: 1;
+        text-align: center;
+        background-color: $light-green;
+        transition: background-color .3s;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover{
+            background-color: $dark-green;
+            transition: background-color .3s;
+        }
+        &::after{
+            content: "";
+            width: 2px;
+            display: block;
+            background: #dee3e7;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+    &__link--auth {
+        color: $white;
+        // font-weight: 600;
+        display: block;
+        padding: 10px;
+        @media (max-width: 576px) {
+            font-size: 12px;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+ 
+}

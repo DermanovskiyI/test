@@ -1,0 +1,48 @@
+.btn {
+
+    border: 2px solid white;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 25px;
+    &--auth {
+        transition: background .3s;
+        display: block;
+        @media (max-width: 576px) {
+            padding: 8px 12px;
+        }
+    }
+    &--auth:hover {
+        background: $light-green;
+        transition: background .3s;
+    }
+
+   &--feedback {
+    flex: 1;
+    background: $light-green;
+    border: none;
+    transition: background .3s;
+    border-radius: 0;
+    // display: flex;
+    position: relative;
+   }
+   &--feedback::after {
+        content: "";
+        width: 2px;
+        height: 100%;
+        background-color: rgba($white, .5);
+        position: absolute;
+        top: 0;
+        right: 0%;
+        transform: translate(0%, 0%);
+   }
+   &--feedback:last-child::after {
+       display: none;
+   }
+   &--feedback:hover {
+    background: $dark-green;
+    transition: background .3s
+   }
+   &--feedback:focus {
+    outline: none;
+   }
+}

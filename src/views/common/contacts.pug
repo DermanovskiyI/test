@@ -1,0 +1,10 @@
+.contacts
+    .title.contacts__title
+        h1.title.contacts__title-text КОНТАКТЫ
+
+    ul.contacts__list
+        each link, picture in {skype:'dermanovskiyi', envelope:'igorderman@mail.ru', phone:'+7-926-948-36-37', 'map_marker':'Зеленоград, корпус 1643, кв. 184'}
+            li.contacts__item
+                .contacts__pic
+                    +icon(picture, 'contacts__pic-icon')
+                a(href=link).contacts__link=link

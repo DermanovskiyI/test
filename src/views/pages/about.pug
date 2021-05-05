@@ -1,0 +1,73 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Обо мне'
+  - var userTitleAbout = 'user__title--about'
+  - var triangleLeft = 'triangle__svg--beige'
+  - var triangleRight = 'triangle__svg--white'
+  - var anotherfooterclass = 'footer--margin'
+  - var headerClass = 'header--hero'
+  - var iconClass = 'header__pic header__pic--portfolio'
+  - var iconName = 'portfolio_header'
+
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+  block hero 
+  include ../common/hero
+
+  
+
+
+
+  section.about
+    .about__info
+      block header pic
+        - var headerClass = 'header--about'
+        - var iconName = 'about_header'
+        - var iconClass = 'header__pic header__pic--about'
+        include ../common/header
+      .title.about__title 
+        h1.about__title-text ОБО МНЕ
+      .about__user
+        .about__photo
+          img(src="./assets/images/igor.jpg", alt="igor").about__photo-img
+
+        .about__desk
+          .about__subtitle
+            p.about__subtitle-text КТО Я
+          .about__desk-text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+    .about__skills
+      .skills
+        .skills__info
+          .skills__subtitle
+            .skills__subtitle-text ЧЕМ Я МОГУ БЫТЬ ВАМ ПОЛЕЗЕН
+
+          .skills__desk
+            p.skills__desk-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+        //- block experience
+        //- include ../components/templates/experience.pug 
+
+        #vue-skills
+
+
+        
+  section.map 
+    #map
+    block contacts 
+    include ../common/contacts
+
+  block footer
+  include ../common/footer.pug
+
+
+
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f7ef329e-e26a-4f62-9239-b089c23d4004&lang=ru_RU" type="text/javascript"></script>
+   
+
+        

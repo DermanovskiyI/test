@@ -1,0 +1,54 @@
+extends ../auth.layout.pug
+
+block variables
+  //- - var userAbout = 'user--welcome'
+  - var userPicWelcome = 'user__pic--welcome'
+  - var userTitleWelcome = 'user__name--welcome'
+  - var userSubtitleWelcome = 'user__subtitle--welcome'
+  - var anotherfooterclass = 'footer--welcome'
+  
+    block scripts
+    //- script(src='about.bundle.js')
+
+block content
+
+  .wrapper
+    .welcome
+     
+
+
+      .auth-btn
+        a(href="#").btn.btn--auth#showAuth Авторизоваться
+
+      .welcome__container
+        .welcome__flipper
+          .welcome__front 
+            .welcome__info  
+              .welcome__user
+                block user 
+                include ../common/user
+
+              .welcome__social
+                block social 
+                include ../common/socials
+
+            block navigation 
+            .welcome__navigation
+              nav.navigation.navigation--auth
+                  ul.navigation__list.navigation__list--auth
+                      each link, page in {'Мои работы': './works.html', 'Обо мне': './about.html', 'Блог': './blog.html'}
+                          li.navigation__item.navigation__item--auth
+                              a(href=link).navigation__link.navigation__link--auth=page
+          .welcome__back
+            .welcome__form
+              //- block auth
+              //- include ../common/auth
+              #vue-auth
+        
+
+
+    block footer 
+    include ../common/footer
+
+
+  

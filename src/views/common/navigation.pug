@@ -1,0 +1,8 @@
+nav.navigation(class=navigation)
+    ul.navigation__list(class=navigationList)
+        each link, page in {'Мои работы': './works.html', 'Обо мне': 'about.html', 'Блог': 'blog.html', 'Авторизация':"#"}
+            li.navigation__item(class=navigationItem)
+                if page == 'Авторизация'
+                    a(href=link class=navigationLink)#showAuthBtn.navigation__link=page
+                else 
+                    a(href=link class=navigationLink).navigation__link=page

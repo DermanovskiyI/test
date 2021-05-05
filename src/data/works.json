@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "1 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ",
+        "skills": "1 HTML, CSS, JAVASCRIPT",
+        "link": "//loftschool.com",
+        "photo": "/assets/images/work-1.png"
+    },
+    {
+        "id": 2,
+        "title": "2 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ",
+        "skills": "2 HTML, CSS, JAVASCRIPT",
+        "link": "//google.com",
+        "photo": "/assets/images/work-2.png"
+    },
+    {
+        "id": 3,
+        "title": "3 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ",
+        "skills": "3 HTML, CSS, JAVASCRIPT",
+        "link": "//ya.ru",
+        "photo": "/assets/images/work-3.png"
+    },
+    {
+        "id": 4,
+        "title": "4 САЙТ ШКОЛЫ ОНЛАЙН ОБРАЗОВАНИЯ",
+        "skills": "4 HTML, CSS, JAVASCRIPT",
+        "link": "//mail.ru",
+        "photo": "/assets/images/work-4.png"
+    }
+]

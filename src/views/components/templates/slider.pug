@@ -1,0 +1,43 @@
+script(type="text/x-template")#slider-container
+    .slider
+        slider-info(
+            :work="work"
+        )
+        slider-display(
+            :work="work"
+        )
+        slider-buttons(  
+            @slide="changeWork"
+            @btnSlide="btnSlide"
+            :work="work"
+            :nextWork="nextWork"
+            :prevWork="prevWork"
+        )
+script(type="text/x-template")#slider-info
+    .slider__info
+        .title.slider__title {{work.title}} 
+
+        .slider__subtitle {{work.skills}}
+
+        a(:href="work.link").slider__link Посмотреть сайт
+            .slider__pic 
+                +icon('link', 'slider__pic-icon')
+script(type="text/x-template")#slider-display
+    .slider__display
+        .slider__display-pic
+            img(:src="work.photo", alt="work-pic").slider__display-pic-img
+script(type="text/x-template")#slider-buttons
+    .slider__buttons
+        //- pre {{work}}
+        .slider__button
+            a(href="#" @click.prevent="slide('prev')" @click="btnSlide('prev')").slider__arrow
+                +icon('arrow_down', 'arrow arrow--slider')
+                .slider__button-container           
+                    .slider__button-pic
+                        img(:src="prevWork.photo", alt="").slider__button-pic-img    
+        .slider__button
+            a(href="#" @click.prevent="slide('next')" @click="btnSlide('next')").slider__arrow
+                +icon('arrow_down', 'arrow arrow--slider arrow--slider--down')
+                .slider__button-container 
+                    .slider__button-pic
+                        img(:src="nextWork.photo", alt="").slider__button-pic-img

@@ -1,0 +1,14 @@
+.experience {
+    font-family: Roboto;
+    &__item {
+        font-size: 28px;
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 28px;
+    }
+    
+}
